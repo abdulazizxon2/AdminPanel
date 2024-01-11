@@ -1,0 +1,133 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+.contener {
+  max-width: 1440px;
+  background-color: #fffdfd84;
+}
+
+.main {
+  display: flex;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 287px;
+  height: 100vh;
+  top: 0;
+  background-color: #2a3042;
+}
+.navbar a {
+  color: #c3c0c0;
+  text-decoration: none;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.navbar p {
+  color: #c3c0c0;
+  position: relative;
+  left: 5px;
+  padding-top: 10px;
+}
+
+.pegess a {
+  display: flex;
+  padding: 7px;
+  width: 283px;
+  }
+
+.navbar a.active {
+  background-color: #ffffff5e;
+  color: #ffffff;
+}
+.Navbar1 {
+    width: 1230px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #ffffff;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+    width: 80%;
+    background-color:#2a3042;
+    padding: 150px 0px;
+    border-radius: 10px;
+    color: white;
+}
+
+form input{
+  width: 70%;
+  height: 25px;
+}
+.labels{
+  padding: 5px;
+}
+.imges{
+  padding: 10px 20px;
+  background-color: white;
+  color: #2a3042;
+  margin-top: 20px;
+  position:relative;
+  right: 315px;
+}
+.img-inp{
+  display: none;
+}
+.send {
+  font-size: 18px;
+}
+
+.ongNavbar{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logoses{
+  display: flex;
+  align-items: center;
+  gap: 85px;
+}
+table{
+  border-collapse: collapse;
+  text-align: center;
+  border: 3px solid #2a3042;
+  position: relative;
+  top: 80px;
+  width: 70%;
+  border-radius: 15px;  
+}
+table thead {
+  background-color: #2a3042;
+  color: white;
+  text-transform: capitalize;
+  border: 1px solid white;
+}
+table thead tr th{
+  padding: 5px;
+}
+ table tbody {
+  color: #2a3042;
+  border: 1px solid #2a3042;
+  /* width: 600px; */
+}
+thead tr .number{
+  width: 7px;
+}
+tbody tr td{
+  padding: 5px;
+}
+/* table tbody img{
+  width: 100px;
+  height: 100px;
+} */

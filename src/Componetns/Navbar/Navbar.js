@@ -1,31 +1,28 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
-
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 export default function Navbar() {
   return (
     <div className="navbar">
-        <div className="chapNavbar">
-            <NavLink to="/">
-                <b>Admins </b>
-            </NavLink>
-            <NavLink to="/categories">
-                <b>Categories</b>
-            </NavLink>
-            <NavLink to="/dashboard">
-                <b>Dashboard</b>
-            </NavLink>
-            <NavLink to="/log">
-                <b>log Out</b>
-            </NavLink>
-            <NavLink to="/product">
-                <b>Product</b>
-            </NavLink>
-            <NavLink to="/settings">
-                <b>Settings</b>
-            </NavLink>
-            
-        </div>
-        <Outlet/>
+      <div className="logoses">
+      <div className="logo">
+        <img src="./white 1.png" alt="" />
+        <h3>Admin Panel</h3>
+      </div>
+      <div className="hamburger">
+      <GiHamburgerMenu />
+      </div>
+      </div>
+      <div className="pegess">
+        <p>Menu</p>
+        <NavLink to="/">
+          <b>Form</b>
+        </NavLink>
+        <NavLink to="/table">
+          <b>Table</b>
+        </NavLink>
+      </div>
+      <Outlet />
     </div>
-  )
+  );
 }
