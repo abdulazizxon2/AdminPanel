@@ -40,7 +40,14 @@
   padding: 7px;
   width: 283px;
   }
-
+.navbar-none .pegess a{
+  width: 50px;
+}
+.navbar-none .pegess a.active{
+  background-color: #ffffff5e;
+  color: #ffffff;
+  width: 70px;
+}
 .navbar a.active {
   background-color: #ffffff5e;
   color: #ffffff;
@@ -61,31 +68,33 @@ form{
     top: 80px;
     width: 80%;
     background-color:#2a3042;
-    padding: 150px 0px;
+    padding: 100px 0px;
     border-radius: 10px;
     color: white;
 }
 
 form input{
-  width: 70%;
-  height: 25px;
+  width: 80%;
+  height: 30px;
 }
 .labels{
   padding: 5px;
+  font-size: 20px;
 }
 .imges{
-  padding: 10px 20px;
+  padding: 20px 30px;
   background-color: white;
   color: #2a3042;
   margin-top: 20px;
   position:relative;
-  right: 315px;
+  right: 355px;
 }
 .img-inp{
   display: none;
 }
 .send {
   font-size: 18px;
+  margin-top: 20px;
 }
 
 .ongNavbar{
@@ -104,7 +113,7 @@ table{
   border: 3px solid #2a3042;
   position: relative;
   top: 80px;
-  width: 70%;
+  /* width: 70%; */
   border-radius: 15px;  
 }
 table thead {
@@ -127,7 +136,33 @@ thead tr .number{
 tbody tr td{
   padding: 5px;
 }
-/* table tbody img{
-  width: 100px;
-  height: 100px;
-} */
+.navbar-none{
+  display: flex;
+  flex-direction: column;
+  background-color: #2a3042;
+  color: white;
+  width: 70px;
+  height: 100vh;
+}
+.navbar-none a{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-none h3{
+  display: none;
+}
+.display-nones{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+}
+.navbar-none img{
+  width: 65px;
+}
+.navbar-none a:hover{
+  background-color: #2a304291;
+}

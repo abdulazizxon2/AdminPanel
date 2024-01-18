@@ -12,5 +12,16 @@ function handleGet(p) {
     payload: p,
   };
 }
+function handleDelete(param) {
+  return {
+      type: FormTypes.delete,
+      payload: param,
+  };
+}
+function Open() {
+  return {
+    type: FormTypes.open
+  }
+}
 
-export { sendForm, handleGet };
+export { sendForm, handleGet,handleDelete,Open };

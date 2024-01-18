@@ -1,25 +1,39 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useSelector } from "react-redux";
+import { FaTable } from "react-icons/fa";
+import { IoMdHome } from "react-icons/io";
 export default function Navbar() {
+  let state = useSelector((state) => state.FormRedux);
+  let { open } = state;
   return (
-    <div className="navbar">
+    <div className={open ? "navbar-none" : "navbar"}>
       <div className="logoses">
-      <div className="logo">
-        <img src="./white 1.png" alt="" />
-        <h3>Admin Panel</h3>
-      </div>
-      <div className="hamburger">
-      <GiHamburgerMenu />
-      </div>
+        <div className="logo">
+          <img src="./white 1.png" alt="" />
+          <h3>Admin Panel</h3>
+        </div>
       </div>
       <div className="pegess">
-        <p>Menu</p>
         <NavLink to="/">
-          <b>Form</b>
+          {open ? (
+            <b className="display-nones">
+              <IoMdHome />
+              Form
+            </b>
+          ) : (
+            <b>Form</b>
+          )}
         </NavLink>
         <NavLink to="/table">
-          <b>Table</b>
+          {open ? (
+            <b className="display-nones">
+              <FaTable />
+              Table
+            </b>
+          ) : (
+            <b>Table</b>
+          )}
         </NavLink>
       </div>
       <Outlet />

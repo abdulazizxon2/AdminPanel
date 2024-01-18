@@ -1,19 +1,26 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { handleDelete } from "../Redux/action/FormAction";
 
 export default function Table() {
   let { products } = useSelector((state) => state.FormRedux);
+  let dispatch = useDispatch();
+
   return (
     <div>
       <table border={"1px"}>
         <thead>
           <tr>
             <th className="number">№</th>
-            {/* <th>img</th> */}
-            <th>nomi</th>
-            <th>soni</th>
-            <th>narx</th>
-            <th>chegirma</th>
+            <th>Nomi</th>
+            <th>Soni</th>
+            <th>Narx</th>
+            <th>Chegirma</th>
+            <th>Rangi</th>
+            <th>Brand</th>
+            <th>Kategorya</th>
+            <th>Material</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -21,16 +28,15 @@ export default function Table() {
             return (
               <tr key={elem?.id}>
                 <th>{index + 1}</th>
-                {/* <td><img src={elem?.img} alt="" /></td> */}
                 <td>{elem?.nomi}</td>
                 <td>{elem?.count}</td>
-
                 {elem?.skidka ? (
                   <td>
                     <b className="b1">
-                      {(elem?.narxi - (elem?.narxi / 100) * elem?.skidka).toFixed(
-                        2
-                      )}
+                      {(
+                        elem?.narxi -
+                        (elem?.narxi / 100) * elem?.skidka
+                      ).toFixed(2)}
                       ₽
                     </b>
                   </td>
@@ -43,6 +49,15 @@ export default function Table() {
                 )}
                 <td>
                   <b>{elem?.skidka ? `${elem?.skidka}%` : "-"}</b>
+                </td>
+                <td>{elem?.color}</td>
+                <td>{elem?.brend}</td>
+                <td>{elem?.kategorya}</td>
+                <td>{elem?.material}</td>
+                <td>
+                  <button onClick={() => dispatch(handleDelete(elem?.id))}>
+                    delete
+                  </button>
                 </td>
               </tr>
             );
